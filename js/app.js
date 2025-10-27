@@ -1,7 +1,9 @@
 import { sounds, defaultPresets } from "./soundData.js";
+import { SoundManager } from "./soundManager.js";
 
 class AmbientMixer {
   constructor() {
+    this.soundManager = new SoundManager();
     this.currentSoundState = {};
     this.masterVolume = 100;
     this.isInitialized = false;
